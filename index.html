@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#111111">
-<meta name="description" content="OG LUX — Discover premium men's wear, women's fashion, native outfits and timeless African style.">
+<meta name="description" content="Discover timeless style with OG LUX. Shop men's fashion, women's fashion and modern African wear. Order directly on WhatsApp.">
 <title>OG LUX | Wear Your Confidence</title>
 
 <style>
 :root {
   --black: #111111;
-  --gold: #c8a96b;
   --cream: #f8f5ef;
+  --gold: #c6a15b;
   --white: #ffffff;
-  --muted: #77736b;
+  --gray: #777777;
 }
 
 * {
@@ -34,53 +34,39 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
-}
-
-.topbar {
-  background: var(--black);
-  color: var(--gold);
-  text-align: center;
-  padding: 9px 12px;
-  font-size: 11px;
-  letter-spacing: 2px;
+  text-decoration: none;
 }
 
 header {
   background: var(--black);
   color: var(--white);
-  padding: 20px 6%;
+  padding: 18px 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  border-bottom: 1px solid #37332a;
+  flex-wrap: wrap;
 }
 
 .logo {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 29px;
-  font-weight: bold;
-  letter-spacing: 4px;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: 3px;
 }
 
 .logo span {
-  display: block;
-  color: #eee7da;
-  font-family: Arial, sans-serif;
-  font-size: 8px;
-  letter-spacing: 5px;
-  text-align: center;
+  color: var(--gold);
 }
 
 nav {
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 18px;
-  font-size: 12px;
-  letter-spacing: 1px;
+}
+
+nav a {
+  font-size: 13px;
 }
 
 nav a:hover {
@@ -88,54 +74,48 @@ nav a:hover {
 }
 
 .hero {
-  min-height: 470px;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.86), rgba(0,0,0,.3)),
-    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=85")
-    center 35% / cover;
+  min-height: 460px;
+  padding: 70px 7%;
   display: flex;
   align-items: center;
-  padding: 65px 8%;
-  color: white;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.88), rgba(0,0,0,.30)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=85")
+    center/cover no-repeat;
 }
 
 .hero-content {
-  max-width: 540px;
+  max-width: 560px;
 }
 
 .eyebrow {
   color: var(--gold);
+  text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
-  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(42px, 7vw, 70px);
-  line-height: 1.08;
-  font-weight: normal;
-  margin-bottom: 20px;
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.1;
+  margin: 18px 0;
 }
 
 .hero p {
-  color: #eee;
-  max-width: 390px;
-  font-size: 14px;
-  margin-bottom: 30px;
+  max-width: 430px;
+  color: #eeeeee;
+  margin-bottom: 26px;
 }
 
 .button {
   display: inline-block;
+  padding: 13px 23px;
   background: var(--gold);
   color: var(--black);
-  padding: 14px 25px;
-  font-size: 11px;
   font-weight: bold;
-  letter-spacing: 1.5px;
   border: 1px solid var(--gold);
-  cursor: pointer;
   transition: .2s;
 }
 
@@ -144,117 +124,406 @@ nav a:hover {
   color: var(--gold);
 }
 
-.section {
+.button-dark {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+section {
   padding: 65px 6%;
 }
 
 .section-heading {
   text-align: center;
-  margin-bottom: 32px;
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-}
-
-.section-heading h2 {
-  font-family: Georgia, serif;
-  font-size: 34px;
-  font-weight: normal;
-}
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin-bottom: 45px;
-}
-
-.category {
-  background: var(--black);
-  color: white;
-  text-align: center;
-  padding: 25px 8px;
-  border-bottom: 3px solid var(--gold);
-  font-family: Georgia, serif;
-  font-size: 17px;
-}
-
-.category:hover {
-  background: #30291d;
-}
-
-.filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 9px;
   margin-bottom: 30px;
 }
 
-.filter {
-  background: transparent;
-  border: 1px solid #d8d0c3;
-  padding: 10px 15px;
-  font-size: 11px;
-  cursor: pointer;
+.section-heading h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  margin-bottom: 8px;
 }
 
-.filter.active,
-.filter:hover {
+.section-heading p {
+  color: var(--gray);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 10px 17px;
+  background: transparent;
+  border: 1px solid #d0c9bc;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
   background: var(--black);
-  color: var(--gold);
+  color: var(--white);
   border-color: var(--black);
 }
 
 .products {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px 17px;
+  gap: 22px;
 }
 
-.product {
-  background: white;
-  padding-bottom: 20px;
-  min-width: 0;
+.product-card {
+  background: var(--white);
+  overflow: hidden;
+  border: 1px solid #eee8dd;
 }
 
-.product img {
-  width: 100%;
-  height: 270px;
-  object-fit: cover;
+.product-card img {
   display: block;
-  background: #e8e1d6;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: #e7e0d5;
 }
 
 .product-info {
-  padding: 17px 15px 0;
+  padding: 18px;
 }
 
-.tag {
-  font-size: 9px;
-  color: #94763e;
-  letter-spacing: 2px;
+.product-info .category {
+  color: #94753b;
+  font-size: 11px;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.product h3 {
-  font-family: Georgia, serif;
-  font-size: 19px;
-  font-weight: normal;
+.product-info h3 {
   margin: 5px 0;
-}
-
-.product p {
-  color: var(--muted);
-  font-size: 12px;
-  margin-bottom: 9px;
+  font-size: 18px;
 }
 
 .price {
-  font-size: 17px;
+  color: var(--gray);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.order-button {
+  display: block;
+  text-align: center;
+  padding: 11px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 13px;
   font-weight: bold;
-  margin-bottom
+}
+
+.order-button:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.about {
+  background: #eae3d7;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  color: #555555;
+  margin-bottom: 22px;
+}
+
+.contact {
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+}
+
+.contact p {
+  margin: 12px 0 25px;
+  color: #dddddd;
+}
+
+footer {
+  padding: 22px 6%;
+  background: #080808;
+  color: #bbbbbb;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer span {
+  color: var(--gold);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10;
+  background: #25D366;
+  color: #ffffff;
+  padding: 13px 17px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 3px 12px rgba(0,0,0,.2);
+}
+
+@media (max-width: 760px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 420px;
+    padding: 55px 6%;
+  }
+
+  section {
+    padding: 48px 5%;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card img {
+    height: 210px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 300px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">OG <span>LUX</span></a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Style. Class. Confidence.</div>
+
+    <h1>Dress Different.<br>Live Luxuriously.</h1>
+
+    <p>
+      Discover timeless fashion that speaks before you do.
+      From everyday essentials to standout African styles,
+      express yourself with OG LUX.
+    </p>
+
+    <a href="#shop" class="button">EXPLORE COLLECTION</a>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="section-heading">
+    <div class="eyebrow">The OG LUX Collection</div>
+    <h2>Find Your Style</h2>
+    <p>Fashion for every mood, every moment and every occasion.</p>
+  </div>
+
+  <div class="categories">
+    <button class="filter-btn active" data-filter="all">All Styles</button>
+    <button class="filter-btn" data-filter="men">Men</button>
+    <button class="filter-btn" data-filter="women">Women</button>
+    <button class="filter-btn" data-filter="african">African Wear</button>
+    <button class="filter-btn" data-filter="unisex">Unisex</button>
+  </div>
+
+  <div class="products">
+
+    <article class="product-card" data-category="men">
+      <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80" alt="Men's casual fashion" loading="lazy">
+      <div class="product-info">
+        <div class="category">Men's Collection</div>
+        <h3>Classic Men's Top</h3>
+        <div class="price">Price on request</div>
+        <a class="order-button" href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20am%20interested%20in%20the%20Classic%20Men%27s%20Top." target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="men">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Stylish outfit inspiration" loading="lazy">
+      <div class="product-info">
+        <div class="category">Men's Collection</div>
+        <h3>Two-Piece Set</h3>
+        <div class="price">Price on request</div>
+        <a class="order-button" href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20am%20interested%20in%20a%20Two-Piece%20Set." target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="women">
+      <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80" alt="Women's fashion inspiration" loading="lazy">
+      <div class="product-info">
+        <div class="category">Women's Collection</div>
+        <h3>Elegant Women's Outfit</h3>
+        <div class="price">Price on request</div>
+        <a class="order-button" href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20am%20interested%20in%20an%20Elegant%20Women%27s%20Outfit." target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="women">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" alt="Women's contemporary clothing" loading="lazy">
+      <div class="product-info">
+        <div class="category">Women's Collection</div>
+        <h3>Everyday Chic</h3>
+        <div class="price">Price on request</div>
+        <a class="order-button" href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20am%20interested%20in%20the%20Everyday%20Chic%20collection." target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="african">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80" alt="Contemporary fashion inspiration" loading="lazy">
+      <div class="product-info">
+        <div class="category">African Wear</div>
+        <h3>Modern Native Style</h3>
+        <div class="price">Price on request</div>
+        <a class="order-button" href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20am%20interested%20in%20Modern%20Native%20Style." target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="unisex">
+      <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" alt="Casual unisex clothing" loading="lazy">
+      <div class="product-info">
+        <div class="category">Unisex Collection</div>
+        <h3>Vintage-Inspired Style</h3>
+        <div class="price">Price on request</div>
+        <a class="order-button" href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20am%20interested%20in%20Vintage-Inspired%20Style." target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-content">
+    <div class="eyebrow">Our Story</div>
+    <h2>Welcome to OG LUX</h2>
+
+    <p>
+      At OG LUX, we believe fashion is more than what you wear.
+      It is how you express your personality, confidence and individuality.
+      Our collection brings together contemporary style and modern African
+      fashion for people who want to look and feel their best.
+    </p>
+
+    <p>
+      Your style. Your statement. Your OG LUX.
+    </p>
+
+    <a href="#shop" class="button button-dark">EXPLORE OUR COLLECTION</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="eyebrow">Let's Connect</div>
+  <h2>Ready to Upgrade Your Style?</h2>
+
+  <p>
+    Have questions about sizes, colours, availability or prices?
+    Send us a message and let's help you find your style.
+  </p>
+
+  <a
+    class="button"
+    href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+    target="_blank"
+    rel="noopener"
+  >CHAT WITH US ON WHATSAPP</a>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> <span>OG LUX</span>. All rights reserved.</p>
+  <p>Style. Class. Confidence.</p>
+</footer>
+
+<a
+  class="whatsapp-float"
+  href="https://wa.me/2349025420523?text=Hello%20OG%20LUX%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with OG LUX on WhatsApp"
+>WhatsApp Us</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const productCards = document.querySelectorAll(".product-card");
+
+filterButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach(function(item) {
+      item.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    productCards.forEach(function(card) {
+      if (filter === "all" || card.dataset.category === filter) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
